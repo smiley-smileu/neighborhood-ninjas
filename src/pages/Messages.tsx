@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Header from "@/components/Header";
 import MessageThread from "@/components/MessageThread";
@@ -35,42 +34,42 @@ const contacts = [
   },
 ];
 
-// Sample messages for the first contact
+// Sample messages for the first contact - Ensuring sender is strictly "user" or "other"
 const sampleMessages = [
   {
     id: "msg1",
     content: "Hi! Thanks for accepting my task.",
-    sender: "other",
+    sender: "other" as const,
     timestamp: "10:10 AM",
   },
   {
     id: "msg2",
     content: "No problem! Happy to help. When do you need the medicine?",
-    sender: "user",
+    sender: "user" as const,
     timestamp: "10:12 AM",
   },
   {
     id: "msg3",
     content: "I need it today if possible. The pharmacy closes at 9 PM.",
-    sender: "other",
+    sender: "other" as const,
     timestamp: "10:15 AM",
   },
   {
     id: "msg4",
     content: "I'll pick it up this afternoon around 4 PM. Is that okay?",
-    sender: "user",
+    sender: "user" as const,
     timestamp: "10:18 AM",
   },
   {
     id: "msg5",
     content: "That's perfect! Thank you so much!",
-    sender: "other",
+    sender: "other" as const,
     timestamp: "10:20 AM",
   },
   {
     id: "msg6",
     content: "I'm on my way to pickup the medicine now",
-    sender: "user",
+    sender: "user" as const,
     timestamp: "10:25 AM",
   },
 ];
